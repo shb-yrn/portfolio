@@ -11,6 +11,20 @@ body {
   font-family: vazirmatn;
 }
 
+#bg_disabled {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-080c168c);
+  z-index: 10;
+  display: none;
+  opacity: 0;
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -ms-transition: all .5s;
+  -o-transition: all .5s;
+}
+
 @font-face {
   font-family: vazirmatn;
   font-style: normal;
@@ -211,6 +225,8 @@ body {
 
 .icons{
   display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 #menu_icon{
@@ -232,7 +248,7 @@ body {
   top: 100%;
   right: 0;
   left: 0;
-  z-index: -1;
+  z-index: 1;
   list-style: none;
   background: #080c16;
   backdrop-filter: blur(10px);
