@@ -1,7 +1,7 @@
 const header = document.getElementById('header');
 const menu_icon = document.getElementById("menu_icon");
 const close_icon = document.getElementById("close_icon");
-const mobile_nav = document.getElementById("mobile_nav");
+const mobile_nav = document.getElementById("mobile_nav_container");
 
 const bgDisabled = document.getElementById("bg_disabled");
 
@@ -40,13 +40,13 @@ bgDisabled.addEventListener('click' , ()=> {
 
 function toggleMenuIcons() {
   if (getComputedStyle(menu_icon).display == "block") {
-    menu_icon.style.display = "none";
-    close_icon.style.display = "block";
+    menu_icon.classList.toggle("invisible_icon");
+    close_icon.classList.toggle("visible_icon");
     openMobileNav();
     openBgDisabled();
   }else{
-    menu_icon.style.display = "block";
-    close_icon.style.display = "none";
+    menu_icon.classList.toggle("invisible_icon");
+    close_icon.classList.toggle("visible_icon");
     closeMobileNav();
     closeBgDisabled();
   }

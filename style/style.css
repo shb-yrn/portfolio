@@ -210,6 +210,7 @@ body {
 .nav_link_btn {
   background: var(--color-gradient-cta);
   padding: 9px 16px 10px 16px;
+  text-align: center;
   border-radius: 9999px;
   -webkit-border-radius: 9999px;
   -moz-border-radius: 9999px;
@@ -230,7 +231,6 @@ body {
 }
 
 #menu_icon{
-  display: block;
   color: #fff;
   cursor: pointer;
 }
@@ -241,31 +241,41 @@ body {
   cursor: pointer;
 }
 
-#mobile_nav{
-  display: flex;
-  flex-direction: column;
+.visible_icon {
+  display: block !important;
+}
+.invisible_icon {
+  display: none !important;
+}
+
+#mobile_nav_container {
   position: absolute;
   top: 100%;
   right: 0;
   left: 0;
   z-index: 1;
-  list-style: none;
   background: #080c16;
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-soft);
   border-top: 1px solid var(--border-soft);
   padding: 10px 24px 18px;
-  transition: all .5s;
   opacity: 0;
-  transform: translateY(-100vh);
+  transition: all .5s;
   -webkit-transition: all .5s;
   -moz-transition: all .5s;
   -ms-transition: all .5s;
   -o-transition: all .5s;
+  transform: translateY(-100vh);
   -webkit-transform: translateY(-100vh);
   -moz-transform: translateY(-100vh);
   -ms-transform: translateY(-100vh);
   -o-transform: translateY(-100vh);
+}
+#mobile_nav{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-bottom: 20px;
 }
 
 #mobile_nav li a {
