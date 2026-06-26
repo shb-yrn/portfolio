@@ -5,6 +5,10 @@
   direction: rtl;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--color-04060C);
   line-height: 1.75;
@@ -74,6 +78,7 @@ body {
   --color-B5C0DA: #B5C0DA;
   --color-2b1200: #2b1200;
   --color-F8FAFF: #F8FAFF;
+  --color-13142299: #13142299;
   --color-text-muted: #7382A3;
   --color-080c168c: #080c168c;
   --color-ffffff0a: #ffffff0a;
@@ -85,6 +90,7 @@ body {
 
   --border-soft: rgba(255,255,255,.08);
   --border-glow: rgba(79,142,255,.4);
+  --border-1f293780: #1f293780;
   --nav-height: 76px;
   --fs-display: clamp(2.2rem, 5.4vw, 4.2rem);
 }
