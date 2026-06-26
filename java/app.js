@@ -1,9 +1,18 @@
+const loading = document.getElementById("loading");
+
 const header = document.getElementById('header');
 const menu_icon = document.getElementById("menu_icon");
 const close_icon = document.getElementById("close_icon");
 const mobile_nav = document.getElementById("mobile_nav_container");
 
 const bgDisabled = document.getElementById("bg_disabled");
+
+window.addEventListener("load" , ()=> {
+  loading.style.transform = "translateY(-100vh)";
+  setTimeout(() => {
+    loading.style.display = "none";
+  }, 550);
+});
 
 window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 20);
