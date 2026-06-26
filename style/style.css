@@ -147,9 +147,15 @@ body {
   --border-soft: rgba(255,255,255,.08);
   --border-glow: rgba(79,142,255,.4);
   --border-1f293780: #1f293780;
+
   --nav-height: 76px;
+
   --fs-display: clamp(2.2rem, 5.4vw, 4.2rem);
   --fs-h2: clamp(1.8rem, 3.6vw, 2.7rem);
+  --fs-paragraph: clamp(0.9rem, 2vw, 1rem);;
+
+  --shadow-glow: 0 0 60px rgba(79,142,255,.18);
+  
 }
 
 .container_site {
@@ -420,7 +426,8 @@ body {
 .bio_hero_about_me {
   max-width: 56ch;
   color: var(--color-B5C0DA);
-  font-size: 1.02rem;
+  /* font-size: 1.02rem; */
+  font-size: var(--fs-paragraph);
   margin: 0 0 2rem;
 }
 
@@ -474,17 +481,94 @@ body {
   padding-top: 1.8rem;
 }
 
-.hero_quickfacts strong {
+.hero_quickfacts strong , .about_me_stats div strong {
   display: block;
   font-size: 1.25rem;
   font-weight: 800;
 }
-.hero_quickfacts span {
+.hero_quickfacts span , .about_me_stats div span {
   font-size: .85rem;
   color: var(--color-text-muted);
 }
 
 /* hero section */
+
+
+/* about me section */
+
+.about_me_container{
+  max-width: 1060px;
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.about_card{
+  background: var(--color-0F1729);
+  border: 1px solid var(--border-soft);
+  border-radius: 28px;
+  padding: 36px;
+  box-shadow: var(--shadow-glow);
+  -webkit-border-radius: 28px;
+  -moz-border-radius: 28px;
+  -ms-border-radius: 28px;
+  -o-border-radius: 28px;
+}
+.about_card svg{
+  display: block;
+  max-width: 340px;
+}
+
+.about_me_texts{
+  display: grid;
+  gap: 20px;
+}
+
+.about_me_texts h2{
+  font-size: clamp(2.5rem , 2vw , 2rem);
+  font-weight: 600;
+  align-self: end;
+}
+
+.about_me_texts h2 span{
+  color: #2F8CFF;
+}
+
+.about_me_texts p{
+  color: var(--color-B5C0DA);
+  font-size: var(--fs-paragraph);
+  max-width: 35rem;
+}
+
+.about_me_stats{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.about_me_stats div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 6px;
+  text-align: center;
+  background-color: #13142299;
+  border: 1px solid #1f293780;
+  padding: 1rem 1rem;
+  border-radius: 16px;
+  transition: transform .2s ease-out, filter .2s ease, background .2s ease, border-color .2s ease;
+  -webkit-transition: transform .2s ease-out, filter .2s ease, background .2s ease, border-color .2s ease;
+  -moz-transition: transform .2s ease-out, filter .2s ease, background .2s ease, border-color .2s ease;
+  -ms-transition: transform .2s ease-out, filter .2s ease, background .2s ease, border-color .2s ease;
+  -o-transition: transform .2s ease-out, filter .2s ease, background .2s ease, border-color .2s ease;
+  &:hover {
+    border-color: var(--border-glow);
+  }
+}
+
+/* about me section */
 
 
 /* skills section */
