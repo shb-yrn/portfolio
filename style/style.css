@@ -800,7 +800,7 @@ body {
   max-width: 900px;
 }
 
-.services_section_body_product {
+.services_section_body_service {
   display: flex;
   flex-direction: column;
   background: var(--color-0F1729);
@@ -829,44 +829,44 @@ body {
     background: var(--color-gradient-135deg-4F8EFF-0-7C5CFF-50-3DE2FF-100);
   }
 }
-.services_section_body_product h3 {
+.services_section_body_service h3 {
   font-size: 1.2rem;
   margin: 0 0 .5rem;
 }
-.services_section_body_product p {
+.services_section_body_service p {
   color: var(--color-B5C0DA);
   font-size: .92rem;
   margin: 0 0 1.4rem;
   min-height: 44px;
 }
 
-.services_section_body_product_price {
+.services_section_body_service_price {
   display: flex;
   align-items: baseline;
   gap: 8px;
   margin-bottom: 1.5rem;
 }
-.services_section_body_product_price span {
+.services_section_body_service_price span {
   color: var(--color-text-muted);
   font-size: .85rem;
 }
-.services_section_body_product_price strong {
+.services_section_body_service_price strong {
   font-size: 2.1rem;
   font-weight: 700;
 }
 
-.services_section_body_product ul {
+.services_section_body_service ul {
   display: flex;
   flex-direction: column;
   gap: 11px;
   margin: 0 0 3rem;
 }
-.services_section_body_product ul li {
+.services_section_body_service ul li {
   list-style: none;
   position: relative;
   padding-right: 22px;
 }
-.services_section_body_product ul li::before {
+.services_section_body_service ul li::before {
   position: absolute;
   content: '√';
   font-size: 20px;
