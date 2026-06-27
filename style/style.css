@@ -928,8 +928,11 @@ body {
   align-items: center;
   justify-content: center;
   color: #5a6070;
-  font-size: 13px;
-  font-weight: 500;
+}
+
+.modal_image_placeholder img{
+  width: 100%;
+  height: 100%;
 }
 
 .modal_platform {
@@ -954,7 +957,7 @@ body {
 
 .modal_desc {
   font-size: 14px;
-  color: #eaf0ff;
+  color: var(--color-B5C0DA);
   line-height: 1.9;
   margin: 0 0 22px;
 }
