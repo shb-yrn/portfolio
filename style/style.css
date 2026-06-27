@@ -144,6 +144,7 @@ body {
   --color-rgba_255_255_255_04: rgba(255, 255, 255, .04);
   --color-gradient-135deg-4f8eff29-7c5cff29: linear-gradient(135deg, #4f8eff29, #7c5cff29);
   --color-gradient-135deg-4F8EFF-0-7C5CFF-50-3DE2FF-100: linear-gradient(135deg, #4F8EFF 0%, #7C5CFF 50%, #3DE2FF 100%);
+  --color-gradient--90deg-2F8CFF-0-8B5CF6-100: linear-gradient(-90deg, #2F8CFF 0%, #8B5CF6 100%);
   --color-gradient-cta: linear-gradient(135deg, #F5B942 0%, #FFD166 100%);
 
   --border-soft: rgba(255,255,255,.08);
@@ -825,7 +826,8 @@ body {
     -o-transform: translateY(-3px);
   }
   &:hover .btn_services {
-    background: var(--color-gradient-135deg-4F8EFF-0-7C5CFF-50-3DE2FF-100);
+    /* background: var(--color-gradient-135deg-4F8EFF-0-7C5CFF-50-3DE2FF-100); */
+    background: var(--color-gradient--90deg-2F8CFF-0-8B5CF6-100);
   }
 }
 .services_section_body_service h3 {
