@@ -485,10 +485,12 @@ body {
   display: block;
   font-size: 1.25rem;
   font-weight: 800;
+  white-space: nowrap;
 }
 .hero_quickfacts span , .about_me_stats div span {
   font-size: .85rem;
   color: var(--color-text-muted);
+  white-space: nowrap;
 }
 
 /* hero section */
