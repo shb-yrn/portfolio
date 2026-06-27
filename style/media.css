@@ -152,3 +152,9 @@
     border-radius: 18px;
   }
 }
+
+@media (max-width: 767px) {
+  .services_section_body {
+    grid-template-columns: 1fr;
+  }
+}
