@@ -1,3 +1,234 @@
+const isDesktop = () => window.matchMedia("(min-width: 769px)").matches;
+
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  // =========================
+  // Helper
+  // =========================
+
+  const reveal = (selector, vars) => {
+    gsap.utils.toArray(selector).forEach((el) => {
+      gsap.from(el, {
+        ease: "power3.out",
+        ...vars,
+        scrollTrigger: {
+          trigger: el,
+          start: "top 85%",
+          once: true,
+        },
+      });
+    });
+  };
+
+  const revealChildren = (selector, vars) => {
+    gsap.utils.toArray(selector).forEach((el) => {
+      gsap.from(el.children, {
+        ease: "power3.out",
+        ...vars,
+        scrollTrigger: {
+          trigger: el,
+          start: "top 85%",
+          once: true,
+        },
+      });
+    });
+  };
+
+  // =========================
+  // Hero
+  // =========================
+
+  if (isDesktop()) {
+    gsap.timeline({
+      defaults: {
+        ease: "power2.out",
+      },
+    })
+
+      .from(".header", {
+        y: -100,
+        opacity: 0,
+        duration: 0.6,
+      })
+
+      .from(
+        ".nav_logo, .nav_links li, .nav_link_btn",
+        {
+          y: -20,
+          opacity: 0,
+          duration: 0.35,
+          stagger: 0.08,
+          ease: "back.out(1.5)",
+        },
+        "-=0.3"
+      )
+
+      .from(
+        ".intro_hero_about_me",
+        {
+          y: 30,
+          opacity: 0,
+          duration: 0.45,
+        },
+        "-=0.1"
+      )
+
+      .from(
+        ".p_hero_about_me, .bio_hero_about_me, .hero_actions, .hero_quickfacts",
+        {
+          y: 20,
+          opacity: 0,
+          duration: 0.35,
+          stagger: 0.1,
+        },
+        "-=0.15"
+      )
+
+      .from(
+        ".hero_picture",
+        {
+          x: 80,
+          opacity: 0,
+          duration: 0.6,
+        },
+        "<"
+      );
+  }
+
+  // =========================
+  // Counter
+  // =========================
+
+  gsap.utils.toArray(".stat-number").forEach((el) => {
+    const target = parseInt(el.dataset.count, 10) || 0;
+    const counter = { val: 0 };
+
+    gsap.to(counter, {
+      val: target,
+      duration: 1.6,
+      ease: "power2.out",
+      snap: { val: 1 },
+
+      scrollTrigger: {
+        trigger: el,
+        start: "top 90%",
+        once: true,
+      },
+
+      onUpdate: () => {
+        el.textContent = counter.val;
+      },
+    });
+  });
+
+  // =========================
+  // Reveal
+  // =========================
+
+  reveal('[data-reveal="text"]', {
+    y: 24,
+    opacity: 0,
+    duration: 0.7,
+  });
+
+  reveal('[data-reveal="img"]', {
+    x: -40,
+    opacity: 0,
+    duration: 0.8,
+  });
+
+  reveal('[data-reveal="form"]', {
+    x: 30,
+    opacity: 0,
+    duration: 0.6,
+  });
+
+  reveal('[data-reveal="article"]', {
+    y: 28,
+    opacity: 0,
+    duration: 0.7,
+  });
+
+  reveal('[data-reveal="card"]', {
+    y: 24,
+    opacity: 0,
+    duration: 0.7,
+  });
+
+  // =========================
+  // Children Reveal
+  // =========================
+
+  revealChildren('[data-reveal="badges"]', {
+    y: 12,
+    opacity: 0,
+    duration: 0.5,
+    stagger: 0.06,
+    ease: "power2.out",
+  });
+
+  revealChildren('[data-reveal="midiaIcons"]', {
+    y: -20,
+    opacity: 0,
+    duration: 0.5,
+    stagger: 0.08,
+    ease: "back.out(1.5)",
+  });
+
+  revealChildren('[data-reveal="list"]', {
+    x: -20,
+    opacity: 0,
+    duration: 0.5,
+    stagger: 0.08,
+    ease: "power2.out",
+  });
+
+  revealChildren('[data-reveal="certificate"]', {
+    y: 24,
+    opacity: 0,
+    duration: 0.6,
+    stagger: 0.12,
+  });
+
+  // =========================
+  // Skills
+  // =========================
+
+  gsap.utils.toArray('[data-reveal="bars"]').forEach((group) => {
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: group,
+          start: "top 85%",
+          once: true,
+        },
+      })
+
+      .from(group, {
+        y: 24,
+        opacity: 0,
+        duration: 0.6,
+        ease: "power3.out",
+      })
+
+      .from(
+        group.querySelectorAll(".skills_section_left_skills div"),
+        {
+          y: 10,
+          opacity: 0,
+          duration: 0.4,
+          stagger: 0.05,
+          ease: "power2.out",
+        },
+        "-=0.3"
+      );
+  });
+});
+
+
+
+
 const loading = document.getElementById("loading");
 
 const header = document.getElementById('header');
@@ -166,7 +397,6 @@ document.addEventListener('keydown', (e) => {
 
 const navLinks = document.querySelectorAll('.nav_links li a');
 const sections = document.querySelectorAll('main > section');
-let isClickingNav = false;
 
 function moveActiveNav(targetId) {
   navLinks.forEach((link) => {
@@ -174,23 +404,8 @@ function moveActiveNav(targetId) {
   });
 }
 
-navLinks.forEach((link) => {
-  link.addEventListener('click', (e) => {
-    moveActiveNav(e.target.dataset.target);
-
-    isClickingNav = true;
-
-    clearTimeout(window._scrollTomeout);
-    window._scrollTimeout = setTimeout(() => {
-      isClickingNav = false;
-    }, 700);
-  });
-});
-
 
 const observerNav = new IntersectionObserver((entries) => {
-  if (isClickingNav) return;
-
   entries.forEach((enter) => {
     if (enter.isIntersecting) {
       moveActiveNav(enter.target.id);

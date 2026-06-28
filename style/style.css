@@ -487,12 +487,12 @@ main{
   font-size: .96rem;
   font-weight: 700;
   border: 1px solid transparent;
-  transition: transform .2s ease-out, filter .2s ease, background .2s ease, border-color .2s ease;
+  transition: filter .2s ease, background .2s ease, border-color .2s ease;
   white-space: nowrap;
-  -webkit-transition: transform .2s ease-out, filter .2s ease, background .2s ease, border-color .2s ease;
-  -moz-transition: transform .2s ease-out, filter .2s ease, background .2s ease, border-color .2s ease;
-  -ms-transition: transform .2s ease-out, filter .2s ease, background .2s ease, border-color .2s ease;
-  -o-transition: transform .2s ease-out, filter .2s ease, background .2s ease, border-color .2s ease;
+  -webkit-transition: filter .2s ease, background .2s ease, border-color .2s ease;
+  -moz-transition: filter .2s ease, background .2s ease, border-color .2s ease;
+  -ms-transition: filter .2s ease, background .2s ease, border-color .2s ease;
+  -o-transition: filter .2s ease, background .2s ease, border-color .2s ease;
 }
 
 .hero_actions {
@@ -535,7 +535,7 @@ main{
   font-weight: 800;
   white-space: nowrap;
 }
-.hero_quickfacts span , .about_me_stats div span {
+.hero_quickfacts span , .about_me_stats div > span {
   font-size: .85rem;
   color: var(--color-text-muted);
   white-space: nowrap;
@@ -608,11 +608,11 @@ main{
   border: 1px solid #1f293780;
   padding: 1rem 1rem;
   border-radius: 16px;
-  transition: transform .2s ease-out, filter .2s ease, background .2s ease, border-color .2s ease;
-  -webkit-transition: transform .2s ease-out, filter .2s ease, background .2s ease, border-color .2s ease;
-  -moz-transition: transform .2s ease-out, filter .2s ease, background .2s ease, border-color .2s ease;
-  -ms-transition: transform .2s ease-out, filter .2s ease, background .2s ease, border-color .2s ease;
-  -o-transition: transform .2s ease-out, filter .2s ease, background .2s ease, border-color .2s ease;
+  transition: filter .2s ease, background .2s ease, border-color .2s ease;
+  -webkit-transition: filter .2s ease, background .2s ease, border-color .2s ease;
+  -moz-transition: filter .2s ease, background .2s ease, border-color .2s ease;
+  -ms-transition: filter .2s ease, background .2s ease, border-color .2s ease;
+  -o-transition: filter .2s ease, background .2s ease, border-color .2s ease;
   &:hover {
     border-color: var(--border-glow);
   }
@@ -682,11 +682,11 @@ main{
   background: var(--color-0F1729);
   padding: 16px;
   border: 1px solid var(--border-soft);
-  transition: transform .2s ease-out, filter .2s ease, background .2s ease, border-color .2s ease;
-  -webkit-transition: transform .2s ease-out, filter .2s ease, background .2s ease, border-color .2s ease;
-  -moz-transition: transform .2s ease-out, filter .2s ease, background .2s ease, border-color .2s ease;
-  -ms-transition: transform .2s ease-out, filter .2s ease, background .2s ease, border-color .2s ease;
-  -o-transition: transform .2s ease-out, filter .2s ease, background .2s ease, border-color .2s ease;
+  transition: filter .2s ease, background .2s ease, border-color .2s ease;
+  -webkit-transition: filter .2s ease, background .2s ease, border-color .2s ease;
+  -moz-transition: filter .2s ease, background .2s ease, border-color .2s ease;
+  -ms-transition: filter .2s ease, background .2s ease, border-color .2s ease;
+  -o-transition: filter .2s ease, background .2s ease, border-color .2s ease;
   border-radius: 26px;
   -webkit-border-radius: 26px;
   -moz-border-radius: 26px;
@@ -734,11 +734,11 @@ main{
   padding: 22px;
   position: relative;
   overflow: hidden;
-  transition: border-color 0.3s ease, transform 0.3s ease;
-  -webkit-transition: border-color 0.3s ease, transform 0.3s ease;
-  -moz-transition: border-color 0.3s ease, transform 0.3s ease;
-  -ms-transition: border-color 0.3s ease, transform 0.3s ease;
-  -o-transition: border-color 0.3s ease, transform 0.3s ease;
+  transition: border-color 0.3s ease;
+  -webkit-transition: border-color 0.3s ease;
+  -moz-transition: border-color 0.3s ease;
+  -ms-transition: border-color 0.3s ease;
+  -o-transition: border-color 0.3s ease;
 }
 @media (hover: hover) {
   .cer_card:hover{
@@ -880,11 +880,11 @@ main{
   -moz-border-radius: 28px;
   -ms-border-radius: 28px;
   -o-border-radius: 28px;
-  transition: border-color .3s ease, box-shadow .3s ease, transform 0.3s ease;
-  -webkit-transition: border-color .3s ease, box-shadow .3s ease, transform 0.3s ease;
-  -moz-transition: border-color .3s ease, box-shadow .3s ease, transform 0.3s ease;
-  -ms-transition: border-color .3s ease, box-shadow .3s ease, transform 0.3s ease;
-  -o-transition: border-color .3s ease, box-shadow .3s ease, transform 0.3s ease;
+  transition: border-color .3s ease, box-shadow .3s ease;
+  -webkit-transition: border-color .3s ease, box-shadow .3s ease;
+  -moz-transition: border-color .3s ease, box-shadow .3s ease;
+  -ms-transition: border-color .3s ease, box-shadow .3s ease;
+  -o-transition: border-color .3s ease, box-shadow .3s ease;
 }
 @media (hover: hover) {
   .services_section_body_service:hover {
