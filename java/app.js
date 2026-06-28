@@ -1,4 +1,4 @@
-const isDesktop = () => window.matchMedia("(min-width: 769px)").matches;
+// const isDesktop = () => window.matchMedia("(min-width: 769px)").matches;
 
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -35,38 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  
-  // =========================
-  // Counter
-  // =========================
-
-  gsap.utils.toArray(".stat-number").forEach((el) => {
-    const target = parseInt(el.dataset.count, 10) || 0;
-    const counter = { val: 0 };
-
-    gsap.to(counter, {
-      val: target,
-      duration: 1.6,
-      ease: "power2.out",
-      snap: { val: 1 },
-
-      scrollTrigger: {
-        trigger: el,
-        start: "top 90%",
-        once: true,
-      },
-
-      onUpdate: () => {
-        el.textContent = counter.val;
-      },
-    });
-  });
-
   // =========================
   // Hero
   // =========================
 
-  if (isDesktop()) {
+  if (true) {
     gsap.timeline({
       defaults: {
         ease: "power2.out",
@@ -122,6 +95,32 @@ document.addEventListener("DOMContentLoaded", () => {
         "<"
       );
   }
+
+  // =========================
+  // Counter
+  // =========================
+
+  gsap.utils.toArray(".stat-number").forEach((el) => {
+    const target = parseInt(el.dataset.count, 10) || 0;
+    const counter = { val: 0 };
+
+    gsap.to(counter, {
+      val: target,
+      duration: 1.6,
+      ease: "power2.out",
+      snap: { val: 1 },
+
+      scrollTrigger: {
+        trigger: el,
+        start: "top 90%",
+        once: true,
+      },
+
+      onUpdate: () => {
+        el.textContent = counter.val;
+      },
+    });
+  });
 
   // =========================
   // Reveal
