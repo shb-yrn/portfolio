@@ -298,8 +298,7 @@ close_icon.addEventListener('click', toggleMenuIcons);
 
 mobileNavLinks.forEach((link) => {
   link.addEventListener('click', () => {
-    closeMobileNav();
-    closeBgDisabled();
+    toggleMenuIcons();
   })
 });
 
