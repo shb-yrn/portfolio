@@ -60,6 +60,15 @@
   }
 }
 
+@media (max-width: 900px) {
+  .articles { grid-template-columns: 1fr; }
+  .art_card_hero  { grid-column: 1; grid-row: auto; min-height: auto; }
+  .art_card_sm    { grid-column: 1; }
+  .art_card_wide  { grid-column: 1; }
+  .art_card_wide_deco { display: none; }
+  .art_card_wide_deco { display: none; }
+}
+
 @media (min-width: 870px) {
   #menu_icon{
     display: none;
@@ -167,6 +176,10 @@
   .about_me_stats div{
     padding: 18px 10px;
     border-radius: 18px;
+  }
+
+  .art_card_hero_deco{
+    display: none;
   }
 }
 

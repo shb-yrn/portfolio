@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="style/media.css">
 </head>
-<body style="margin-bottom: 5rem;">
+<body dir="rtl" style="margin-bottom: 5rem;">
   <div id="bg_disabled"></div>
 
   <div id="loading">
@@ -365,6 +365,95 @@
             مشاهده گواهی اصلی
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"></path></svg>
           </a>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="articles_section sections_main">
+      <div class="container_site">
+        <div class="article_container">
+          <div class="article_text">
+            <h2>مقالات و <span>نوشته‌ها</span></h2>
+            <p>دیدگاه‌های من از دنیای توسعه</p>
+          </div>
+          <div class="articles">
+
+            <div class="art_card art_card_hero">
+              <div class="art_card_content">
+                <span class="art_card_badge">معماری نرم‌افزار</span>
+                <h3>Clean Architecture در .NET:<span>از تئوری تا پیاده‌سازی واقعی</span></h3>
+                <p class="art_card_excerpt">چطور می‌توان یک پروژه .NET را با معماری تمیز طراحی کرد که هم تست‌پذیر باشد هم قابل نگهداری در بلند مدت؟</p>
+                <div class="art_card_footer">
+                  <div class="art_card_info">
+                    <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg> ۸ دقیقه</span>
+                    <span class="art_card_dot"></span>
+                    <span>.NET · Architecture</span>
+                  </div>
+                  <a href="https://www.linkedin.com/in/misaq-yarian-600847a2" target="_blank" class="art_card_link">
+                    مطالعه
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="art_card_hero_deco">
+                <div class="art_card_code_block">
+                  <span class="code_line"><span class="code_kw">public class</span> <span class="code_cls">CleanApp</span> {</span>
+                  <span class="code_line">  <span class="code_kw">private readonly</span> IRepository _repo;</span>
+                  <span class="code_line">  <span class="code_fn">Execute</span>() ⇒ _repo.<span class="code_fn">GetAll</span>();</span>
+                  <span class="code_line">}</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="art_card art_card_sm">
+              <span class="art_card_badge">Microservices</span>
+              <h3>Microservices با .NET و Docker</h3>
+              <p class="art_card_excerpt">الگوهای طراحی، مدیریت ارتباط بین سرویس‌ها و استقرار با Kubernetes.</p>
+              <div class="art_card_footer">
+                <div class="art_card_info">
+                  <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg> ۱۲ دقیقه</span>
+                </div>
+                <a href="https://www.linkedin.com/in/misaq-yarian-600847a2" target="_blank" class="art_card_link">مطالعه <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+              </div>
+            </div>
+
+            <div class="art_card art_card_sm">
+              <span class="art_card_badge">React.js</span>
+              <h3>React Hooks عمیق: useCallback و useMemo</h3>
+              <p class="art_card_excerpt">زمان استفاده صحیح از Hooks پیشرفته برای بهینه‌سازی رندر.</p>
+              <div class="art_card_footer">
+                <div class="art_card_info">
+                  <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg> ۶ دقیقه</span>
+                </div>
+                <a href="https://www.linkedin.com/in/misaq-yarian-600847a2" target="_blank" class="art_card_link">مطالعه <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+              </div>
+            </div>
+
+            <div class="art_card art_card_wide">
+              <div class="art_card_wide_content">
+                <span class="art_card_badge">Django</span>
+                <h3>ساخت API امن با Django REST Framework و JWT</h3>
+                <p class="art_card_excerpt">پیاده‌سازی احراز هویت JWT، Permission Classes، throttling و caching در Django.</p>
+                <div class="art_card_footer">
+                  <div class="art_card_info">
+                    <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg> ۱۰ دقیقه</span>
+                    <span class="art_card_dot"></span>
+                    <span>Python · Security</span>
+                  </div>
+                  <a href="https://www.linkedin.com/in/misaq-yarian-600847a2" target="_blank" class="art_card_link">مطالعه <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                </div>
+              </div>
+              <div class="art_card_wide_deco">
+                <div>
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F7B731" stroke-width="1.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10" stroke="#F7B731"></polyline></svg>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
         </div>
       </div>
     </section>
