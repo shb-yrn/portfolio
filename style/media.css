@@ -8,13 +8,11 @@
     grid-template-columns: 1fr;
     justify-items: center;
   }
-
   .hero_about_me{
     text-align: center;
     justify-items: center;
     width: 100%;
   }
-
   .hero_quickfacts{
     width: 100%;
     justify-content: center;
