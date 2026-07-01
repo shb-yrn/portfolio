@@ -418,3 +418,118 @@ const observerNav = new IntersectionObserver((entries) => {
 sections.forEach((section) => observerNav.observe(section));
 
 
+
+// Projects section
+const projectsData = [
+  {
+    title: "پایش وضعیت توربین‌های زیمنس",
+    tag: "صنعتی",
+    challenge: "تیم بهره‌برداری ایستگاه تقویت فشار گاز برای پایش وضعیت توربین‌های زیمنس به بازدید حضوری و ثبت دستی پارامترها متکی بود؛ همین موضوع کنترل لحظه‌ای وضعیت تجهیزات را دشوار می‌کرد.",
+    solution: "یک نرم‌افزار دسکتاپ تحت ویندوز با C# و DevExpress طراحی و پیاده‌سازی شد که پارامترهای عملکردی توربین‌ها را از دیتابیس SQL Server می‌خواند و در قالب داشبوردهای گرافیکی قابل‌فهم برای اپراتور نمایش می‌دهد.",
+    result: "این نرم‌افزار در ایستگاه تقویت فشار گاز دهق اصفهان نصب و در حال استفاده است و پایش وضعیت توربین‌ها را برای اپراتورها ساده‌تر کرده است.",
+    tags: ["C#", "DevExpress", "SQL Server", "Windows Application"]
+  },
+  {
+    title: "سامانه پایش ناوگان نیروگاهی",
+    tag: "صنعتی",
+    challenge: "مدیران ارشد نیاز داشتند وضعیت چند نیروگاه را به‌طور هم‌زمان و از یک نقطه واحد رصد کنند، بدون اینکه مجبور باشند بین چند سامانه جداگانه جابه‌جا شوند.",
+    solution: "یک داشبورد تحت وب با بک‌اند .NET و SQL Server و فرانت‌اند HTML5، CSS3، JavaScript و Bootstrap ساخته شد که وضعیت هر واحد نیروگاهی را با نمودارهای Highcharts، AmCharts و Chart.js نمایش می‌دهد.",
+    result: "این سامانه در نیروگاه شهید رجایی قزوین، نیروگاه کهنوج و نیروگاه کرمان مستقر شده و مدیریت متمرکز چند نیروگاه از یک پنل واحد را ممکن کرده است.",
+    tags: [".NET", "SQL Server", "Bootstrap", "Highcharts"]
+  },
+  {
+    title: "پایش ایستگاه‌های تقویت فشار گاز",
+    tag: "صنعتی",
+    challenge: "ثبت دستی پارامترهای فشار و دما در ایستگاه‌های تقویت فشار گاز، احتمال خطای انسانی و تأخیر در گزارش‌گیری سازمانی را افزایش می‌داد.",
+    solution: "سامانه‌ای تحت وب برای ثبت خودکار و گزارش‌گیری دوره‌ای پارامترهای ایستگاه‌ها با .NET و SQL Server در بک‌اند و HTML5، CSS3، JavaScript و Bootstrap در فرانت‌اند توسعه داده شد؛ داده‌ها با نمودارهای Highcharts و AmCharts نمایش داده می‌شوند.",
+    result: "این سامانه در ایستگاه‌های تقویت فشار گاز سمنان، صفاشهر و پتاوه مستقر شده و دقت داده‌های ثبت‌شده را افزایش داده است.",
+    tags: [".NET", "SQL Server", "Bootstrap", "AmCharts"]
+  },
+  {
+    title: "نرم‌افزار Smart Report",
+    tag: "سازمانی",
+    challenge: "واحدهای مختلف سازمان داده‌های خود را در منابع پراکنده نگه می‌داشتند و تولید گزارش‌های مدیریتی یکپارچه زمان زیادی می‌برد.",
+    solution: "موتور گزارش‌گیری پویا با .NET و SQL Server ساخته شد که داده‌های اکتسابی نیروگاه یا ایستگاه تقویت فشار گاز را در قالب نمودار نمایش می‌دهد و امکان چاپ مستقیم گزارش‌های تولیدشده را نیز فراهم می‌کند.",
+    result: "زمان تهیه گزارش‌های مدیریتی به‌طور قابل‌توجهی کوتاه‌تر شد و دقت داده‌های ارائه‌شده به مدیران افزایش یافت.",
+    tags: [".NET", "SQL Server", "Chart.js"]
+  },
+  {
+    title: "پروژه ERP",
+    tag: "سازمانی",
+    challenge: "سازمان به سامانه‌ای یکپارچه برای مدیریت منابع انسانی، انبارداری، تسهیلات و رفاهی و خدمات پرسنلی نیاز داشت که جایگزین فرآیندهای پراکنده و دستی شود.",
+    solution: "سامانه ERP با بک‌اند Django REST Framework و فرانت‌اند React.js طراحی و پیاده‌سازی شد؛ شامل ماژول‌های منابع انسانی، انبارداری، تسهیلات و رفاهی و خدمات.",
+    result: "فرآیندهای پرسنلی و انبارداری سازمان یکپارچه و ساختاریافته شد و امکان مدیریت متمرکز ماژول‌های مختلف فراهم گردید.",
+    tags: ["Django REST Framework", "React.js", "JWT", "RESTful"]
+  },
+  {
+    title: "دوره آموزشی Jira در مکتب‌خونه",
+    tag: "آموزشی",
+    challenge: "بسیاری از تیم‌های نرم‌افزاری Jira را نصب می‌کنند اما به دلیل عدم آشنایی با تنظیمات صحیح Workflow، از ظرفیت واقعی ابزار استفاده نمی‌کنند.",
+    solution: "دوره‌ای کامل برای راه‌اندازی، پیکربندی Workflow، مدیریت پروژه و نصب پلاگین‌های کاربردی Jira طراحی و در پلتفرم مکتب‌خونه منتشر شد.",
+    result: "صدها نفر از تیم‌های نرم‌افزاری توانستند Jira را به‌درستی در فرایند کاری خود پیاده‌سازی کنند.",
+    tags: ["Jira", "آموزش", "مدیریت پروژه"]
+  }
+];
+
+const projectModalOverlay = document.getElementById('projectModalOverlay');
+const projectModalClose = document.getElementById('projectModalClose');
+const projectModalTag = document.getElementById('projectModalTag');
+const projectModalTitle = document.getElementById('projectModalTitle');
+const projectModalChallenge = document.getElementById('projectModalChallenge');
+const projectModalSolution = document.getElementById('projectModalSolution');
+const projectModalResult = document.getElementById('projectModalResult');
+const projectModalTags = document.getElementById('projectModalTags');
+const projectLinks = document.querySelectorAll('.proj_card_link');
+
+function openProjectModal(index) {
+  const proj = projectsData[index];
+  if (!proj) return;
+  projectModalTag.textContent = proj.tag;
+  projectModalTitle.textContent = proj.title;
+  projectModalChallenge.textContent = proj.challenge;
+  projectModalSolution.textContent = proj.solution;
+  projectModalResult.textContent = proj.result;
+  projectModalTags.innerHTML = "";
+  proj.tags.forEach((tag) => {
+    const span = document.createElement("span");
+    span.textContent = tag;
+    projectModalTags.appendChild(span);
+  });
+  projectModalOverlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeProjectModal() {
+  projectModalOverlay.classList.remove('active');
+  document.body.style.overflow = 'auto';
+}
+
+projectLinks.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    openProjectModal(Number(e.currentTarget.dataset.index));
+  });
+});
+
+projectModalClose.addEventListener('click', closeProjectModal);
+projectModalOverlay.addEventListener('click', (e) => {
+  if (e.target === projectModalOverlay) closeProjectModal();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeProjectModal();
+});
+
+// Project filter
+const projFilterBtns = document.querySelectorAll('.proj_filter_btn');
+const projCards = document.querySelectorAll('.proj_card');
+
+projFilterBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    projFilterBtns.forEach((b) => b.classList.remove('proj_filter_active'));
+    btn.classList.add('proj_filter_active');
+
+    const filter = btn.dataset.filter;
+    projCards.forEach((card) => {
+      const match = filter === 'all' || card.dataset.category === filter;
+      card.style.display = match ? '' : 'none';
+    });
+  });
+});

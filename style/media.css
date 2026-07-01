@@ -76,6 +76,10 @@
   .social_media_footer{
     display: none;
   }
+  .quick_links_footer {
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
   .contact_us_form {
     padding: 30px 22px;
   }
@@ -100,6 +104,50 @@
   }
   .art_card_wide_deco { 
     display: none; 
+  }
+
+  .projects_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .proj_card_featured {
+    grid-column: 1 / 3;
+    grid-row: auto;
+  }
+
+  .jira_plans_body {
+    grid-template-columns: 1fr 1fr;
+  }
+  .jira_plan_featured {
+    grid-column: 1 / 3;
+  }
+
+  .course_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .course_card_featured {
+    grid-column: 1 / 3;
+  }
+}
+
+@media (max-width: 560px) {
+}
+
+@media (max-width: 620px) {
+  .projects_grid {
+    grid-template-columns: 1fr;
+  }
+  .proj_card_featured {
+    grid-column: 1;
+    flex-direction: column;
+  }
+  .proj_card_featured .proj_card_aside {
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-right: none;
+    border-bottom: 1px dashed rgba(79,142,255,.2);
+    padding-right: 0;
+    padding-bottom: 16px;
+    width: 100%;
   }
 }
 
@@ -155,15 +203,22 @@
     grid-template-columns: 1fr;
   }
 
-  .course_section_body {
+  .jira_plans_body {
     grid-template-columns: 1fr;
   }
-  .course_section_body_image div {
-    width: 130px;
-    height: 130px;
+
+  .course_grid {
+    grid-template-columns: 1fr;
   }
-  .course_section_body {
-    padding: 30px 22px;
+
+  .paper_item {
+    padding: 20px 16px;
+  }
+  .paper_item_right {
+    gap: 12px;
+  }
+  .paper_icon {
+    display: none;
   }
 }
 
@@ -174,6 +229,13 @@
   }
   .input_topic_form, .textarea_message_form, .contact_us_btn {
     grid-column: auto;
+  }
+  .academic_papers_list li {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .academic_paper_year {
+    align-self: flex-start;
   }
 }
 
