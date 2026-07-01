@@ -229,11 +229,6 @@
   .paper_icon {
     display: none;
   }
-  .papers_footer {
-    flex-direction: column;
-    gap: 14px;
-    align-items: flex-start;
-  }
 }
 
 @media (max-width: 600px) {

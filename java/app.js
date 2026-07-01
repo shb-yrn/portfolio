@@ -420,10 +420,8 @@ const observerNav = new IntersectionObserver((entries) => {
 sections.forEach((section) => observerNav.observe(section));
 
 
-// =========================
-// Projects section
-// =========================
 
+// Projects section
 const projectsData = [
   {
     title: "پایش وضعیت توربین‌های زیمنس",
