@@ -103,15 +103,6 @@
   }
 }
 
-@media (min-width: 870px) {
-  #menu_icon{
-    display: none;
-  }
-  .menu {
-    display: none;
-  }
-}
-
 @media (max-width: 870px){
   .orb_blue{
     top: -180px;
@@ -125,12 +116,12 @@
   .nav_links{
     display: none;
   }
-  .nav_link_btn:not(.mobile_nav_container_contact .nav_link_btn) {
+  .nav_link_btn:not(.mobile_nav_container .nav_link_btn) {
     display: none;
   }
 
-  #menu_icon{
-    display: block;
+  .nav_action .icons {
+    display: flex;
   }
 
   .hero_picture{

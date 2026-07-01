@@ -235,7 +235,7 @@ const loading = document.getElementById("loading");
 const header = document.getElementById('header');
 const menu_icon = document.getElementById("menu_icon");
 const close_icon = document.getElementById("close_icon");
-const mobile_nav = document.getElementById("mobile_nav_container");
+const mobile_nav = document.querySelector(".mobile_nav_container");
 const mobileNavLinks = document.querySelectorAll('#mobile_nav li a')
 
 const bgDisabled = document.getElementById("bg_disabled");
@@ -252,13 +252,11 @@ window.addEventListener('scroll', () => {
 });
 
 function openMobileNav(){
-  mobile_nav.style.transform = "translateY(0)";
-  mobile_nav.style.opacity = 1;
+  mobile_nav.classList.add('active_nav');
   header.classList.add("scrolled");
 }
 function closeMobileNav(){
-  mobile_nav.style.transform = "translateY(-100vh)";
-  mobile_nav.style.opacity = 0;
+  mobile_nav.classList.remove('active_nav');
   header.classList.toggle('scrolled', window.scrollY > 20);
 }
 
