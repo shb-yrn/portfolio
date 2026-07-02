@@ -318,10 +318,10 @@ const cer_infos = [
   {
     title: "React.js: Building an Interface",
     platform: "دانشگاهی",
-    year: "ژانویهٔ ۲۰۲۳",
+    year: "دسامبر ۲۰۲۲",
     desc: "آموزش ساخت رابط کاربری با React.js، شامل کامپوننت‌بندی، مدیریت state و الگوهای رایج توسعه فرانت‌اند.",
     url: "https://www.linkedin.com/learning/certificates/81f6d44bdc2a1fa511f4215411fa46ed516bf2fbdd5abf78f3c8cf4f0c3fdac5",
-    imgUrl: "images/React_js_Building_an_Interface.png"
+    imgUrl: "images/certificate/React_js_Building_an_Interface.jpeg"
   },
   {
     title: "React.js Essential Training",
@@ -329,31 +329,39 @@ const cer_infos = [
     year: "دسامبر ۲۰۲۲",
     desc: "آشنایی با مفاهیم پایه React.js و اصول طراحی کامپوننت‌محور برای توسعه اپلیکیشن‌های وب.",
     url: "https://www.linkedin.com/learning/certificates/b00ad03571b05eac2cb85d033dbc5f348d44f53f462db1af710bf6b91c519ead",
-    imgUrl: "images/React_js_Essential_Training.png"
+    imgUrl: "images/certificate/React_js_Essential_Training.png"
   },
   {
-    title: "ASP.NET Core with Angular 6",
-    platform: "بین المللی",
-    year: "نوامبر ۲۰۲۱",
-    desc: "ترکیب بک‌اند ASP.NET Core با فرانت‌اند Angular 6 برای ساخت اپلیکیشن‌های full-stack مدرن.",
-    url: "https://toplearn.com/Certificate/8673__612aa241-bcc5-9f9b-dc00-39ed32a4bc26",
-    imgUrl: "images/ASPNET_Core_with_Angular_6.jpg"
+    title: "C# and .NET Essential Training",
+    platform: "لورم",
+    year: "فبروری ۲۰۲۳",
+    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, cum!",
+    url: "#",
+    imgUrl: "images/certificate/C_and_NET_Essential_Training.jpeg"
   },
   {
-    title: "Django REST Framework",
-    platform: "دانشگاهی",
-    year: "ژانویهٔ ۲۰۲۲",
-    desc: "ساخت API با Django REST Framework، شامل سریالایزرها، ویوست‌ها و احراز هویت.",
-    url: "https://www.linkedin.com/in/misaq-yarian-600847a2/details/certifications/",
-    imgUrl: false
+    title: "React: Accessibility",
+    platform: "لورم",
+    year: "دسامبر ۲۰۲۲",
+    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, cum!",
+    url: "#",
+    imgUrl: "images/certificate/React_Accessibility.jpeg"
   },
   {
-    title: "Django",
-    platform: "بین المللی",
-    year: "ژانویهٔ ۲۰۲۲",
-    desc: "آشنایی با فریم‌ورک Django برای توسعه سریع و امن اپلیکیشن‌های وب با پایتون.",
-    url: "https://www.linkedin.com/in/misaq-yarian-600847a2/details/certifications/",
-    imgUrl: false
+    title: "Building React and Django Apps",
+    platform: "لورم",
+    year: "ژانویهٔ ۲۰۲۳",
+    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, cum!",
+    url: "#",
+    imgUrl: "images/certificate/Building_React_and_Django_Apps.jpeg"
+  },
+  {
+    title: "SCRUM",
+    platform: "لورم",
+    year: "زمستان 1400",
+    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, cum!",
+    url: "#",
+    imgUrl: "images/certificate/scrum.jpg"
   }
 ];
 
