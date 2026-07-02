@@ -387,7 +387,6 @@ const cer_infos = [
     desc: "دوره آموزشی ساخت پروژه کامل با استفاده از Angular 6 در سمت فرانت‌اند و Asp.Net Core در سمت بک‌اند که با موفقیت به پایان رسیده است",
     url: "https://toplearn.com/Certificate/8673__612aa241-bcc5-9f9b-dc00-39ed32a4bc26",
     imgUrl: "images/certificate/Asp.Net_Core_Angular6.jpeg",
-    isContain: true
   },
   {
     title: "پروژه محور Asp.Net Core",
@@ -396,7 +395,6 @@ const cer_infos = [
     desc: "دوره آموزشی پروژه‌محور Asp.Net Core که به صورت عملی و از طریق ساخت یک پروژه واقعی برگزار شده و با موفقیت به پایان رسیده است",
     url: "https://toplearn.com/Certificate/16196__612aa241-bcc5-9f9b-dc00-39ed32a4bc26",
     imgUrl: "images/certificate/Asp.Net_Core.jpeg",
-    isContain: true
   }
 ];
 
