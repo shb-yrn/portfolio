@@ -155,6 +155,7 @@ main{
   --color-gradient-135deg-4f8eff29-7c5cff29: linear-gradient(135deg, #4f8eff29, #7c5cff29);
   --color-gradient-135deg-4F8EFF-0-7C5CFF-50-3DE2FF-100: linear-gradient(135deg, #4F8EFF 0%, #7C5CFF 50%, #3DE2FF 100%);
   --color-gradient--90deg-2F8CFF-0-8B5CF6-100: linear-gradient(-90deg, #2F8CFF 0%, #8B5CF6 100%);
+  --color-gradient-180deg-rgba-79-142-255-08-0F1729-55: linear-gradient(180deg, rgba(79,142,255,.08), #0F1729 55%);
   --color-gradient-cta: linear-gradient(135deg, #F5B942 0%, #FFD166 100%);
 
   --border-soft: rgba(255,255,255,.08);
@@ -1493,10 +1494,6 @@ main{
 
 /* jira plans section */
 
-.jira_plans_row {
-  width: 100%;
-}
-
 .jira_plans_header h2 {
   font-size: var(--fs-h2);
   text-align: center;
@@ -1538,11 +1535,6 @@ main{
     border-color: var(--border-glow);
     transform: translateY(-3px);
   }
-}
-
-.jira_plan_featured {
-  border: 2px solid var(--color-4F8EFF);
-  background: linear-gradient(180deg, rgba(79,142,255,.08), var(--color-0F1729) 55%);
 }
 
 .jira_plan_card h3 {
@@ -1613,25 +1605,6 @@ main{
   margin: 0 auto;
 }
 
-.services_section_body_single .services_section_body_service {
-  position: relative;
-  border: 2px solid var(--color-4F8EFF);
-  background: linear-gradient(180deg, rgba(79,142,255,.08), var(--color-0F1729) 55%);
-  padding: 40px 34px;
-}
-
-.services_section_body_single .services_section_body_service_badge {
-  position: absolute;
-  top: -13px;
-  right: 30px;
-  background: var(--color-gradient--90deg-2F8CFF-0-8B5CF6-100);
-  color: #fff;
-  font-size: .72rem;
-  font-weight: 700;
-  padding: 5px 16px;
-  border-radius: 9999px;
-}
-
 .services_section_header h2 {
   font-size: var(--fs-h2);
   text-align: center;
@@ -1657,7 +1630,7 @@ main{
 .services_section_body_service {
   display: flex;
   flex-direction: column;
-  background: var(--color-0F1729);
+  background: var(--color-gradient-180deg-rgba-79-142-255-08-0F1729-55);
   border: 1px solid var(--border-soft);
   padding: 34px 30px;
   border-radius: 28px;
@@ -1682,7 +1655,6 @@ main{
     -o-transform: translateY(-3px);
   }
   .services_section_body_service:hover .btn_services {
-    /* background: var(--color-gradient-135deg-4F8EFF-0-7C5CFF-50-3DE2FF-100); */
     background: var(--color-gradient--90deg-2F8CFF-0-8B5CF6-100);
   }
   
@@ -1760,10 +1732,6 @@ main{
 /* srvices section */
 
 /* course section */
-
-.course_section_row {
-  width: 100%;
-}
 
 .course_section_heading h2 {
   font-size: var(--fs-h2);
@@ -1856,7 +1824,6 @@ main{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  max-width: 1080px;
   margin: 0 auto;
 }
 
@@ -1881,23 +1848,6 @@ main{
   }
 }
 
-.course_card_featured {
-  border: 2px solid var(--color-7C5CFF);
-  background: linear-gradient(180deg, rgba(139,92,246,.1), var(--color-0F1729) 55%);
-}
-
-.course_card_badge {
-  position: absolute;
-  top: -13px;
-  right: 26px;
-  background: var(--color-gradient-cta);
-  color: var(--color-2b1200);
-  font-size: .72rem;
-  font-weight: 700;
-  padding: 5px 16px;
-  border-radius: 9999px;
-}
-
 .course_card_icon {
   width: 56px;
   height: 56px;
@@ -1908,10 +1858,6 @@ main{
   background: rgba(79,142,255,.1);
   color: var(--color-4F8EFF);
   margin-bottom: 1.2rem;
-}
-.course_card_featured .course_card_icon {
-  background: rgba(139,92,246,.12);
-  color: var(--color-8B5CF6);
 }
 
 .course_card_level {
@@ -1961,9 +1907,6 @@ main{
   right: 0;
   transform: translateY(-50%);
   color: var(--color-4F8EFF);
-}
-.course_card_featured ul li::before {
-  color: var(--color-8B5CF6);
 }
 
 .course_card_price {
