@@ -318,7 +318,7 @@ const cer_infos = [
   {
     title: "React.js: Building an Interface",
     platform: "دانشگاهی",
-    year: "دسامبر ۲۰۲۲",
+    year: "Dec 2022",
     desc: "آموزش ساخت رابط کاربری با React.js، شامل کامپوننت‌بندی، مدیریت state و الگوهای رایج توسعه فرانت‌اند.",
     url: "https://www.linkedin.com/learning/certificates/81f6d44bdc2a1fa511f4215411fa46ed516bf2fbdd5abf78f3c8cf4f0c3fdac5",
     imgUrl: "images/certificate/React_js_Building_an_Interface.jpeg"
@@ -326,7 +326,7 @@ const cer_infos = [
   {
     title: "React.js Essential Training",
     platform: "فنی",
-    year: "دسامبر ۲۰۲۲",
+    year: "Des 2022",
     desc: "آشنایی با مفاهیم پایه React.js و اصول طراحی کامپوننت‌محور برای توسعه اپلیکیشن‌های وب.",
     url: "https://www.linkedin.com/learning/certificates/b00ad03571b05eac2cb85d033dbc5f348d44f53f462db1af710bf6b91c519ead",
     imgUrl: "images/certificate/React_js_Essential_Training.png"
@@ -334,7 +334,7 @@ const cer_infos = [
   {
     title: "C# and .NET Essential Training",
     platform: "لورم",
-    year: "فبروری ۲۰۲۳",
+    year: "Feb 2023",
     desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, cum!",
     url: "#",
     imgUrl: "images/certificate/C_and_NET_Essential_Training.jpeg"
@@ -342,7 +342,7 @@ const cer_infos = [
   {
     title: "React: Accessibility",
     platform: "لورم",
-    year: "دسامبر ۲۰۲۲",
+    year: "Dec 2022",
     desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, cum!",
     url: "#",
     imgUrl: "images/certificate/React_Accessibility.jpeg"
@@ -350,7 +350,7 @@ const cer_infos = [
   {
     title: "Building React and Django Apps",
     platform: "لورم",
-    year: "ژانویهٔ ۲۰۲۳",
+    year: "Jan 2023",
     desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, cum!",
     url: "#",
     imgUrl: "images/certificate/Building_React_and_Django_Apps.jpeg"

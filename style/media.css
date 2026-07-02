@@ -222,6 +222,10 @@
   .paper_icon {
     display: none;
   }
+
+  .paper_item_left .paper_arrow {
+    display: none;
+  }
 }
 
 @media (max-width: 600px) {
