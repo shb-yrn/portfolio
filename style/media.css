@@ -13,6 +13,10 @@
   .jira_plans_body {
     grid-template-columns: 1fr;
   }
+
+  .jira_plans_body {
+    max-width: 640px;
+  }
 }
 
 @media (min-width: 980px) {
