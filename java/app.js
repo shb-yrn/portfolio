@@ -241,12 +241,10 @@ const mobileNavLinks = document.querySelectorAll('#mobile_nav li a')
 const bgDisabled = document.getElementById("bg_disabled");
 
 window.addEventListener("load" , ()=> {
+  loading.style.transform = "translateY(-100vh)";
   setTimeout(() => {
-    loading.style.transform = "translateY(-100vh)";
-    setTimeout(() => {
-      loading.style.display = "none";
-    }, 550);
-  }, 500);
+    loading.style.display = "none";
+  }, 550);
 });
 
 window.addEventListener('scroll', () => {
