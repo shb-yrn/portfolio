@@ -236,7 +236,8 @@ const header = document.getElementById('header');
 const menu_icon = document.getElementById("menu_icon");
 const close_icon = document.getElementById("close_icon");
 const mobile_nav = document.querySelector(".mobile_nav_container");
-const mobileNavLinks = document.querySelectorAll('#mobile_nav li a')
+const mobileNavLinks = document.querySelectorAll('#mobile_nav li a , #aside_nav_link_btn');
+
 
 const bgDisabled = document.getElementById("bg_disabled");
 
