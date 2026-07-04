@@ -1,6 +1,14 @@
 const isDesktop = () => window.matchMedia("(min-width: 769px)").matches;
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  const updateYear = document.getElementById('footer_update_year');
+
+  let currentYear = new Date().getFullYear();
+  updateYear.textContent = currentYear;
+
+
+
   gsap.registerPlugin(ScrollTrigger);
 
   // =========================
@@ -41,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // =========================
 
   gsap.utils.toArray(".stat-number").forEach((el) => {
-    const target = parseFloat(el.dataset.count, 10) || 0;
+    const target = parseInt(el.dataset.count, 10) || 0;
     const counter = { val: 0 };
 
     gsap.to(counter, {
@@ -59,10 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
       onUpdate: () => {
         el.textContent = counter.val;
       },
-
-      onComplete: () => {
-        el.textContent = target;
-      }
     });
   });
 
@@ -246,6 +250,8 @@ const mobileNavLinks = document.querySelectorAll('#mobile_nav li a , #aside_nav_
 const bgDisabled = document.getElementById("bg_disabled");
 
 window.addEventListener("load" , ()=> {
+  document.body.style.overflow = "auto";
+  
   loading.style.transform = "translateY(-100vh)";
   setTimeout(() => {
     loading.style.display = "none";

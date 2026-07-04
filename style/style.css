@@ -13,6 +13,7 @@ body {
   background-color: var(--color-04060C);
   line-height: 1.75;
   font-family: vazirmatn;
+  overflow: hidden;
 }
 
 img {
@@ -375,7 +376,6 @@ main{
 
 .mobile_nav_container {
   position: fixed;
-  top: -100%;
   right: 0;
   left: 0;
   z-index: 20;
@@ -385,21 +385,35 @@ main{
   border-top: 1px solid var(--border-soft);
   padding: calc(var(--nav-height) - 10px) 24px 18px;
   opacity: 0;
+  visibility: hidden;
   transition: all .5s;
   -webkit-transition: all .5s;
   -moz-transition: all .5s;
   -ms-transition: all .5s;
   -o-transition: all .5s;
+  transform: translateY(-100svh);
+  -webkit-transform: translateY(-100svh);
+  -moz-transform: translateY(-100svh);
+  -ms-transform: translateY(-100svh);
+  -o-transform: translateY(-100svh);
 }
 .mobile_nav_container.active_nav {
-  top: 0;
   opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
 }
 #mobile_nav{
   display: flex;
   flex-direction: column;
   list-style: none;
   margin-bottom: 20px;
+
+  height: 60vh;
+  overflow-y: auto;
 }
 
 #mobile_nav li a {
@@ -425,8 +439,6 @@ main{
 }
 
 .img_hero_picture {
-  position: relative;
-  background-color: var(--color-fff);
   width: 300px;
   height: 300px;
   overflow: hidden;
