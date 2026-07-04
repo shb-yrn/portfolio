@@ -148,6 +148,7 @@ main{
   --color-13142299: #13142299;
   --color-0F1729: #0F1729;
   --color-text-muted: #7382A3;
+  --color-text-muted_2: #8a8a8a;
   --color-080c168c: #080c168c;
   --color-ffffff0a: #ffffff0a;
   --color-ffffff14: #ffffff14;
@@ -1522,6 +1523,7 @@ main{
 @media (hover: hover) {
   .jira_plan_card:hover {
     border-color: var(--border-glow);
+    box-shadow: var(--shadow-glow);
     transform: translateY(-3px);
   }
 }
@@ -1663,7 +1665,7 @@ main{
 .services_section_body_service_price {
   display: flex;
   align-items: baseline;
-  gap: 8px;
+  gap: 10px;
   margin-bottom: 1.5rem;
 }
 .services_section_body_service_price span {
@@ -1673,6 +1675,12 @@ main{
 .services_section_body_service_price strong {
   font-size: 2.1rem;
   font-weight: 700;
+}
+.services_section_body_service_price .old_price_offer {
+  font-size: 1rem;
+  color: var(--color-text-muted_2);
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
 }
 
 .services_section_body_service ul, .course_section_body_details ul {
@@ -1901,8 +1909,9 @@ main{
 .course_card_price {
   display: flex;
   align-items: baseline;
-  gap: 8px;
+  gap: 10px;
   margin-bottom: 1.4rem;
+  direction: rtl;
 }
 .course_card_price strong {
   font-size: 1.6rem;
@@ -1911,6 +1920,26 @@ main{
 .course_card_price span {
   color: var(--color-text-muted);
   font-size: .85rem;
+}
+.course_card_price .old_price_offer {
+  font-size: 0.85rem;
+  color: var(--color-text-muted_2);
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+}
+.jira_offer_badge {
+  position: absolute;
+  top: -10px;
+  right: 16px;
+  display: inline-block;
+  background: var(--color-gradient-cta);
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 4px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  white-space: nowrap;
 }
 
 .course_card .btn {
