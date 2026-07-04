@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // =========================
 
   gsap.utils.toArray(".stat-number").forEach((el) => {
-    const target = parseInt(el.dataset.count, 10) || 0;
+    const target = parseFloat(el.dataset.count, 10) || 0;
     const counter = { val: 0 };
 
     gsap.to(counter, {
@@ -59,6 +59,10 @@ document.addEventListener("DOMContentLoaded", () => {
       onUpdate: () => {
         el.textContent = counter.val;
       },
+
+      onComplete: () => {
+        el.textContent = target;
+      }
     });
   });
 
