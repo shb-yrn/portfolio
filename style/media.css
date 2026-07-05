@@ -93,6 +93,9 @@
   .email_location_footer{
     display: none;
   }
+  .footer_social_mobile{
+    display: grid;
+  }
   .social_media_footer{
     display: none;
   }
@@ -229,6 +232,19 @@
   }
   .academic_paper_year {
     align-self: flex-start;
+  }
+}
+
+@media (max-width: 540px) {
+  
+  .footer_social_mobile{
+    grid-template-columns: auto;
+    justify-items: center;
+    /* width: 100%; */
+  }
+  .footer_social_mobile .location{
+    grid-column: auto;
+    /* justify-self: auto; */
   }
 }
 

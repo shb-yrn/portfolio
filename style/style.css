@@ -1972,7 +1972,7 @@ main{
 .contact_us_section{
   width: 100%;
   color: var(--color-fff);
-  padding-bottom: 4rem;
+  padding-bottom: 1rem;
 }
 
 .contact_us_container{
@@ -2008,7 +2008,7 @@ main{
   align-items: center;
 }
 
-.email_location_footer > div p{
+.email_location_footer > div p , .footer_social_mobile > div p{
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -2021,17 +2021,32 @@ main{
   color: var(--color-text-muted);
 }
 
-.email_location_footer > div p a , .email_location_footer > div p span:last-child{
+.footer_social_mobile > div p span{
+  color: var(--color-text-muted_2);
+}
+
+.email_location_footer > div p a , .footer_social_mobile > div p a , .email_location_footer > div p span:last-child , .footer_social_mobile > div p span:last-child{
   text-decoration: none;
   color: var(--color-fff);
 }
 
-.email_location_footer > div p a{
+.email_location_footer > div p a , .footer_social_mobile > div p a{
   border-bottom: 1px solid var(--color-fff);
 }
 
 .email_location_footer .location{
   margin-bottom: 2rem;
+}
+
+.footer_social_mobile{
+  display: none;
+  grid-template-columns: auto auto;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.footer_social_mobile .location{
+  grid-column: 1 / 3;
+  justify-self: center;
 }
 
 .copy_btn{
@@ -2049,10 +2064,12 @@ main{
   transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-.copy_btn:hover{
-  background: rgba(255,255,255,0.1);
-  color: var(--color-fff);
-  border-color: rgba(255,255,255,0.25);
+@media (hover:hover) {
+  .copy_btn:hover{
+    background: rgba(255,255,255,0.1);
+    color: var(--color-fff);
+    border-color: rgba(255,255,255,0.25);
+  }
 }
 
 .copy_btn .icon_check{
@@ -2094,16 +2111,6 @@ main{
     color: var(--color-fff);
     border-color: var(--border-glow);
   }
-}
-
-.social_media_footer{
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.social_media_footer a {
-  text-decoration: none;
 }
 
 .contact_us_form{
