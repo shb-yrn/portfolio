@@ -588,3 +588,47 @@ projFilterBtns.forEach((btn) => {
     });
   });
 });
+
+// copy email and phone number
+const copyBtn = document.querySelectorAll('.copy_btn');
+
+copyBtn.forEach(btn => {
+  btn.addEventListener('click' , ()=>{
+    const text = btn.dataset.copyText;
+
+    const markCopied = () => {
+      let currentTitle = btn.title;
+      btn.classList.add('copied');
+      btn.setAttribute('title', 'کپی شد!');
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.setAttribute('title', currentTitle);
+      }, 2000);
+    };
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(markCopied).catch(() => {
+        fallbackCopy(text, markCopied);
+      });
+    } else {
+      fallbackCopy(text, markCopied);
+    }
+  });
+});
+
+// for old browsers that don't support navigator
+function fallbackCopy(text, onSuccess) {
+  const textarea = document.createElement('textarea');
+  textarea.value = text;
+  textarea.style.position = 'fixed';
+  textarea.style.opacity = '0';
+  document.body.appendChild(textarea);
+  textarea.select();
+  try {
+    document.execCommand('copy');
+    onSuccess();
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+  document.body.removeChild(textarea);
+}

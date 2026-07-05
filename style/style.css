@@ -2003,8 +2003,16 @@ main{
   align-items: center;
 }
 
+.email_location_footer > div p{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
 .email_location_footer > div p span{
   display: block;
+  width: 100%;
   color: var(--color-text-muted);
 }
 
@@ -2019,6 +2027,44 @@ main{
 
 .email_location_footer .location{
   margin-bottom: 2rem;
+}
+
+.copy_btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.copy_btn:hover{
+  background: rgba(255,255,255,0.1);
+  color: var(--color-fff);
+  border-color: rgba(255,255,255,0.25);
+}
+
+.copy_btn .icon_check{
+  display: none;
+}
+
+.copy_btn.copied{
+  color: #3de2ff;
+  border-color: #3de2ff;
+}
+
+.copy_btn.copied .icon_copy{
+  display: none;
+}
+
+.copy_btn.copied .icon_check{
+  display: block;
 }
 
 .quick_links_footer {
