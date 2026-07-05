@@ -2116,17 +2116,17 @@ main{
   -o-border-radius: 30px;
 }
 
-.section_social_media_footer_mobile{
+.footer_section{
   padding: 2rem 0;
   border-top: 1px solid var(--border-soft);
 }
-.social_media_footer_mobile{
+.footer_section{
   display: flex;
   gap: 16px;
   justify-content: center;
   align-items: center;
 }
-.social_media_footer_mobile a{
+.footer_section a{
   text-decoration: none;
 }
 

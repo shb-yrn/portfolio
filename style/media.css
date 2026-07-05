@@ -23,11 +23,6 @@
   }
 }
 
-@media (min-width: 980px) {
-  .social_media_footer_mobile{
-    display: none;
-  }
-}
 @media (max-width: 980px) {
   .row_hero_section{
     grid-template-columns: 1fr;
