@@ -459,7 +459,6 @@ main{
 
 .intro_hero_about_me {
   font-size: var(--fs-display);
-  /* font-weight: 800; */
   line-height: 1.25;
   margin: 0 0 .6rem;
 }
