@@ -2053,15 +2053,19 @@ main{
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.12);
-  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(143, 168, 255, 0.35);
+  background:  rgba(143, 168, 255, 0.1);
   color: var(--color-text-muted);
   cursor: pointer;
   flex-shrink: 0;
   transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  -webkit-transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  -moz-transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  -ms-transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  -o-transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 @media (hover:hover) {
