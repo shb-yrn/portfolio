@@ -12,10 +12,8 @@ export default async function handler(req, res) {
   }
 
   // توکن و چت آیدی از Environment Variables خونده می‌شن، نه هاردکد توی کد
-  // const token = process.env.TELEGRAM_BOT_TOKEN;
-  // const chatId = process.env.TELEGRAM_CHAT_ID;
-  const token = "8948345151:AAFftxE9RrTBeYAdDvR8rcVfK_7XRShxoTE";
-  const chatId = "6818256494";
+  const token = process.env.TELEGRAM_BOT_TOKEN;
+  const chatId = process.env.TELEGRAM_CHAT_ID;
 
   const text = `
   topic : ${topic}
