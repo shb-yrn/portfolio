@@ -640,3 +640,129 @@ function fallbackCopy(text, onSuccess) {
   }
   document.body.removeChild(textarea);
 }
+
+const contactUsForm = document.querySelector('.contact_us_form');
+const formBtn = contactUsForm.querySelector('.contact_us_btn button');
+
+contactUsForm.addEventListener('submit', async function (e) {
+  e.preventDefault();
+
+  const botToken = "8948345151:AAFftxE9RrTBeYAdDvR8rcVfK_7XRShxoTE";
+  const chatId = "6818256494";
+
+  const formName = document.getElementById('inputNameForm').value.trim();
+  const formEmail = document.getElementById('inputEmailForm').value.trim();
+  const formTopic = document.getElementById('inputTopicForm').value.trim();
+  const formMessage = document.getElementById('textareaMessageForm').value.trim();
+
+  if (!formName || !formEmail || !formMessage) {
+    alert('لطفا فیلد هارا پر کنید');
+    return;
+  }
+
+  if (!contactUsForm.checkValidity()) {
+    alert('لطفا فرم را به درستی پر کنید');
+    return;
+  }
+
+  formBtn.disabled = true;
+  formBtn.textContent = "درحال ارسال ...";
+  
+  
+  try {
+    
+    const res = await fetch('/api/send-message', {
+      method : 'POST',
+      headers : {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ formName, formTopic, formEmail, formMessage })
+    });
+    const data = await res.json();
+    
+    
+    if (data.ok) {
+      formBtn.textContent = "ارسال شد";
+      
+      e.target.reset();
+    } else {
+      formBtn.textContent = "falied";
+    }
+  } catch(err) {
+    console.error(err);
+    alert('خطا در ارتباط');
+  } finally {
+    formBtn.disabled = false;
+    formBtn.textContent = "ارسال پیام";
+  }
+})
+
+
+
+
+// contactUsForm.addEventListener('submit', async function (e) {
+//   e.preventDefault();
+
+//   const botToken = "8948345151:AAFftxE9RrTBeYAdDvR8rcVfK_7XRShxoTE";
+//   const chatId = "6818256494";
+
+//   const formName = document.getElementById('inputNameForm').value.trim();
+//   const formEmail = document.getElementById('inputEmailForm').value.trim();
+//   const formTopic = document.getElementById('inputTopicForm').value.trim();
+//   const formMessage = document.getElementById('textareaMessageForm').value.trim();
+
+//   if (!formName || !formEmail || !formMessage) {
+//     alert('لطفا فیلد هارا پر کنید');
+//     return;
+//   }
+
+//   if (!contactUsForm.checkValidity()) {
+//     alert('لطفا فرم را به درستی پر کنید');
+//     return;
+//   }
+
+//   formBtn.disabled = true;
+//   formBtn.textContent = "درحال ارسال ...";
+
+//   const userTextMessage = `
+//   topic : ${formTopic}
+
+//   name : ${formName}
+//   email : ${formEmail}
+
+//   text : 
+//     ${formMessage}
+//   `;
+
+
+//   try {
+    
+//     const res = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+//       method : 'POST',
+//       headers : {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify({chat_id: chatId, text: userTextMessage})
+//     });
+//     const data = await res.json();
+
+    
+//     if (data.ok) {
+//       formBtn.textContent = "ارسال شد";
+//       setTimeout(() => {
+//         formBtn.textContent = "ارسال پیام";
+//       }, 2000);
+
+//       e.target.reset();
+//     } else {
+//       formBtn.textContent = "falied";
+//       setTimeout(() => {
+//         formBtn.textContent = "ارسال پیام";
+//       }, 2000);
+//     }
+//   } catch(err) {
+//     formBtn.textContent = "ارسال پیام";
+//     console.error(err);
+//     alert('خطا در ارتباط');
+//   }
+// })
