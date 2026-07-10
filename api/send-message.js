@@ -13,6 +13,10 @@ export default async function handler(req, res) {
   const token = process.env.TELEGRAM_BOT_TOKEN;
   const chatId = process.env.TELEGRAM_CHAT_ID;
 
+  if (!token || !chatId) {
+    return res.status(500).json({ ok: false, error: 'تنظیمات سرور ناقص است.' });
+  }
+
   const text = `
   topic : ${topic}
 
