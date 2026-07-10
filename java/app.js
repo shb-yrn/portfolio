@@ -656,7 +656,6 @@ document.querySelector('.contact_us_form').addEventListener('submit', async func
     return;
   }
  
-  // جلوگیری از ارسال چندباره
   submitBtn.disabled = true;
   submitBtn.textContent = 'در حال ارسال...';
  

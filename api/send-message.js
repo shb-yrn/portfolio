@@ -1,12 +1,10 @@
 export default async function handler(req, res) {
-  // فقط اجازه‌ی متد POST رو می‌دیم
   if (req.method !== 'POST') {
     return res.status(405).json({ ok: false, error: 'Method not allowed' });
   }
 
   const { name, email, topic, message } = req.body;
 
-  // اعتبارسنجی سمت سرور (خیلی مهمه، هیچوقت فقط به اعتبارسنجی فرانت‌اند اکتفا نکن)
   if (!name || !email || !message) {
     return res.status(400).json({ ok: false, error: 'فیلدهای ضروری خالی هستند.' });
   }
