@@ -18,13 +18,13 @@ export default async function handler(req, res) {
   const chatId = "6818256494";
 
   const text = `
-  topic : ${formTopic}
+  topic : ${topic}
 
-  name : ${formName}
-  email : ${formEmail}
+  name : ${name}
+  email : ${email}
 
   text : 
-    ${formMessage}
+    ${message}
   `;
 
   try {
