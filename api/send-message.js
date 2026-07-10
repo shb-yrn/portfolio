@@ -17,11 +17,15 @@ export default async function handler(req, res) {
   const token = "8948345151:AAFftxE9RrTBeYAdDvR8rcVfK_7XRShxoTE";
   const chatId = "6818256494";
 
-  const text = `📩 پیام جدید از فرم تماس
-👤 نام: ${name}
-📧 ایمیل: ${email}
-📝 موضوع: ${topic || 'ندارد'}
-💬 پیام: ${message}`;
+  const text = `
+  topic : ${formTopic}
+
+  name : ${formName}
+  email : ${formEmail}
+
+  text : 
+    ${formMessage}
+  `;
 
   try {
     const telegramRes = await fetch(
