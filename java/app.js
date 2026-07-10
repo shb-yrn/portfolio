@@ -644,58 +644,48 @@ function fallbackCopy(text, onSuccess) {
 const contactUsForm = document.querySelector('.contact_us_form');
 const formBtn = contactUsForm.querySelector('.contact_us_btn button');
 
-contactUsForm.addEventListener('submit', async function (e) {
+
+document.querySelector('.contact_us_form').addEventListener('submit', async function (e) {
   e.preventDefault();
-
-  const botToken = "8948345151:AAFftxE9RrTBeYAdDvR8rcVfK_7XRShxoTE";
-  const chatId = "6818256494";
-
-  const formName = document.getElementById('inputNameForm').value.trim();
-  const formEmail = document.getElementById('inputEmailForm').value.trim();
-  const formTopic = document.getElementById('inputTopicForm').value.trim();
-  const formMessage = document.getElementById('textareaMessageForm').value.trim();
-
-  if (!formName || !formEmail || !formMessage) {
-    alert('لطفا فیلد هارا پر کنید');
+ 
+  const submitBtn = e.target.querySelector('button');
+  const name = document.getElementById('inputNameForm').value.trim();
+  const email = document.getElementById('inputEmailForm').value.trim();
+  const topic = document.getElementById('inputTopicForm').value.trim();
+  const message = document.getElementById('textareaMessageForm').value.trim();
+ 
+  if (!name || !email || !message) {
+    alert('لطفاً فیلدهای ضروری را پر کنید.');
     return;
   }
-
-  if (!contactUsForm.checkValidity()) {
-    alert('لطفا فرم را به درستی پر کنید');
-    return;
-  }
-
-  formBtn.disabled = true;
-  formBtn.textContent = "درحال ارسال ...";
-  
-  
+ 
+  // جلوگیری از ارسال چندباره
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'در حال ارسال...';
+ 
   try {
-    
     const res = await fetch('/api/send-message', {
-      method : 'POST',
-      headers : {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ formName, formTopic, formEmail, formMessage })
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, topic, message }),
     });
+ 
     const data = await res.json();
-    
-    
+ 
     if (data.ok) {
-      formBtn.textContent = "ارسال شد";
-      
+      alert('پیام شما با موفقیت ارسال شد!');
       e.target.reset();
     } else {
-      formBtn.textContent = "falied";
+      alert('خطا در ارسال پیام. دوباره تلاش کنید.');
     }
-  } catch(err) {
+  } catch (err) {
     console.error(err);
-    alert('خطا در ارتباط');
+    alert('خطا در ارتباط با سرور.');
   } finally {
-    formBtn.disabled = false;
-    formBtn.textContent = "ارسال پیام";
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'ارسال پیام';
   }
-})
+});
 
 
 
