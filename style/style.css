@@ -678,6 +678,9 @@ main{
   -ms-border-radius: 9999px;
   -o-border-radius: 9999px;
 }
+.skills_section_right_skills div p, .skills_section_left_skills div p {
+  direction: ltr;
+}
 
 .skills_section_left {
   display: flex;
