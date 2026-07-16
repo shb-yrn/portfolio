@@ -404,6 +404,14 @@ const cer_infos = [
     desc: "دوره آموزشی پروژه‌محور Asp.Net Core که به صورت عملی و از طریق ساخت یک پروژه واقعی برگزار شده و با موفقیت به پایان رسیده است",
     url: "https://toplearn.com/Certificate/16196__612aa241-bcc5-9f9b-dc00-39ed32a4bc26",
     imgUrl: "images/certificate/Asp.Net_Core.jpeg",
+  },
+  {
+    title: "بوت کمپ مدیریت محصول",
+    platform: "Toplearn",
+    year: "1405",
+    desc: "دوره فشرده مدیریت محصول از آموزشگاه رهنما کالج",
+    url: "https://toplearn.com/Certificate/16196__612aa241-bcc5-9f9b-dc00-39ed32a4bc26",
+    imgUrl: "",
   }
 ];
 
