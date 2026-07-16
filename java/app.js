@@ -407,7 +407,7 @@ const cer_infos = [
     imgUrl: "",
   },
   {
-    title: "مهندسی سیستم Capbella",
+    title: "مهندسی سیستم cappella",
     platform: "توربوتک",
     year: "1402",
     desc: "دوره مهندسی سیستم",
