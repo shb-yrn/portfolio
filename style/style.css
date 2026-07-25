@@ -1933,19 +1933,6 @@ main{
   margin-bottom: 1.2rem;
 }
 
-.course_card_level {
-  display: inline-block;
-  align-self: flex-start;
-  font-size: .72rem;
-  font-weight: 700;
-  color: #8fa3c8;
-  background: #638cff14;
-  border: 1px solid var(--border-soft);
-  border-radius: 8px;
-  padding: 4px 12px;
-  margin-bottom: .8rem;
-}
-
 .course_card h3 {
   font-size: 1.1rem;
   margin: 0 0 .6rem;
