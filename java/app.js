@@ -418,6 +418,7 @@ const cer_infos = [
 
 function openModal(index) {
   const cer = cer_infos[index];
+  if (!cer) return;
   modalPlatform.textContent = cer.platform;
   modalTitle.textContent = cer.title;
   modalYear.textContent = cer.year;
@@ -427,6 +428,7 @@ function openModal(index) {
     modalText.innerHTML = "";
     var cerImg = document.createElement("img");
     cerImg.src = cer.imgUrl;
+    cerImg.setAttribute("loading", "lazy");
     if (cer.isContain) {
       cerImg.style.objectFit = "contain";
     }
@@ -444,7 +446,7 @@ function closeModal() {
 
 credLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
-    openModal(Number(e.target.dataset.index));
+    openModal(Number(e.currentTarget.dataset.index));
   });
 });
 
