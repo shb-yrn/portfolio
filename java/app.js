@@ -1,5 +1,66 @@
 const isDesktop = () => window.matchMedia("(min-width: 769px)").matches;
 
+function playHeroAnimaition() {
+
+  if (isDesktop()) {
+    gsap
+      .timeline({
+        defaults: {
+          ease: "power2.out",
+        },
+      })
+
+      .from(".header", {
+        y: -100,
+        opacity: 0,
+        duration: 0.6,
+      })
+
+      .from(
+        ".nav_logo, .nav_links li, .nav_link_btn",
+        {
+          y: -20,
+          opacity: 0,
+          duration: 0.35,
+          stagger: 0.08,
+          ease: "back.out(1.5)",
+        },
+        "-=0.3",
+      )
+
+      .from(
+        ".intro_hero_about_me",
+        {
+          y: 30,
+          opacity: 0,
+          duration: 0.45,
+        },
+        "-=0.1",
+      )
+
+      .from(
+        ".p_hero_about_me, .bio_hero_about_me, .hero_actions, .hero_quickfacts",
+        {
+          y: 20,
+          opacity: 0,
+          duration: 0.35,
+          stagger: 0.1,
+        },
+        "-=0.15",
+      )
+
+      .from(
+        ".hero_picture",
+        {
+          x: 80,
+          opacity: 0,
+          duration: 0.6,
+        },
+        "<",
+      );
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const updateYear = document.getElementById("footer_update_year");
 
@@ -65,68 +126,6 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
   });
-
-  // =========================
-  // Hero
-  // =========================
-
-  if (isDesktop()) {
-    gsap
-      .timeline({
-        defaults: {
-          ease: "power2.out",
-        },
-      })
-
-      .from(".header", {
-        y: -100,
-        opacity: 0,
-        duration: 0.6,
-      })
-
-      .from(
-        ".nav_logo, .nav_links li, .nav_link_btn",
-        {
-          y: -20,
-          opacity: 0,
-          duration: 0.35,
-          stagger: 0.08,
-          ease: "back.out(1.5)",
-        },
-        "-=0.3",
-      )
-
-      .from(
-        ".intro_hero_about_me",
-        {
-          y: 30,
-          opacity: 0,
-          duration: 0.45,
-        },
-        "-=0.1",
-      )
-
-      .from(
-        ".p_hero_about_me, .bio_hero_about_me, .hero_actions, .hero_quickfacts",
-        {
-          y: 20,
-          opacity: 0,
-          duration: 0.35,
-          stagger: 0.1,
-        },
-        "-=0.15",
-      )
-
-      .from(
-        ".hero_picture",
-        {
-          x: 80,
-          opacity: 0,
-          duration: 0.6,
-        },
-        "<",
-      );
-  }
 
   // =========================
   // Reveal
@@ -246,8 +245,9 @@ const bgDisabled = document.getElementById("bg_disabled");
 
 window.addEventListener("load", () => {
   document.body.style.overflow = "auto";
-
+  
   loading.style.transform = "translateY(-100vh)";
+  playHeroAnimaition();
   setTimeout(() => {
     loading.style.display = "none";
   }, 550);
