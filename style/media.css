@@ -55,7 +55,7 @@
   .about_me_texts p{
     font-size: var(--fs-paragraph);
   }
-  .about_me_texts > p:first-of-type {
+  .about_me_texts > p {
     background-color: #13142299;
     border: 1px solid #1f293780;
     border-radius: 16px;
@@ -65,9 +65,6 @@
     -ms-border-radius: 16px;
     -o-border-radius: 16px;
   }
-  .about_me_texts > p:last-of-type {
-    display: none;
-  }
   .about_me_texts{
     text-align: center;
     justify-items: center;
@@ -75,6 +72,7 @@
   .about_me_texts p{
     max-width: 100%;
     line-height: 2;
+    word-spacing: 1px;
   }
   .about_me_stats{
     width: 100%;
@@ -282,6 +280,11 @@
   .about_me_stats div{
     padding: 18px 10px;
     border-radius: 18px;
+  }
+
+  .skills_section_left_header {
+    justify-content: center;
+    align-items: center;
   }
 
   .art_card_hero_deco{

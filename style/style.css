@@ -479,9 +479,9 @@ main{
 .bio_hero_about_me {
   max-width: 56ch;
   color: var(--color-B5C0DA);
-  /* font-size: 1.02rem; */
   font-size: var(--fs-paragraph);
   margin: 0 0 2rem;
+  word-spacing: 1px;
 }
 
 .btn {
@@ -663,7 +663,9 @@ main{
 .skills_section_right {
   display: flex;
   flex-direction: column;
+  justify-self: center;
   gap: 1.3rem;
+  text-align: center;
 }
 .skills_section_right h2 {
   font-size: var(--fs-h2);
