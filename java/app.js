@@ -414,6 +414,14 @@ const cer_infos = [
     url: "#",
     imgUrl: "",
   },
+  {
+    title: "Managing Teams",
+    platform: "LinkedIn",
+    year: "Dec 2025",
+    desc: "Managing Teams",
+    url: "https://www.linkedin.com/learning/certificates/acb7f9bff8f5735e2573b613c4a32f2ee0c472b4246033b7973ffed88cef1af6/",
+    imgUrl: "images/certificate/Managing_Teams.webp",
+  },
 ];
 
 function openModal(index) {
