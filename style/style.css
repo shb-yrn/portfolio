@@ -515,19 +515,6 @@ main{
   text-decoration: none;
 }
 
-.hero_action_certificate_download {
-  color: var(--color-F8FAFF);
-  background: var(--color-ffffff0a);
-  border-color: var(--border-soft);
-  text-decoration: none;
-}
-@media (hover: hover) {
-  .hero_action_certificate_download:hover {
-    background: var(--color-ffffff14);
-    border-color: var(--border-glow);
-  }
-}
-
 .hero_quickfacts {
   display: flex;
   gap: 36px;
