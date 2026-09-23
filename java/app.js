@@ -422,6 +422,33 @@ const cer_infos = [
     url: "https://www.linkedin.com/learning/certificates/acb7f9bff8f5735e2573b613c4a32f2ee0c472b4246033b7973ffed88cef1af6/",
     imgUrl: "images/certificate/Managing_Teams.webp",
   },
+  {
+    title: "پداگوژی عمومی",
+    platform: "سازمان آموزش فنی و حرفه ای کشور",
+    year: "اسفند 1394",
+    desc: "گواهی مهارت پداگوژی فنی و حرفه ای تاریخ صدور اسفند ۱۳۹۴ بدون انقضا",
+    url: "#",
+    imgUrl: "images/certificate/pedagogy_omoomi.webp",
+    isContain: true
+  },
+  {
+    title: "طراحی وب",
+    platform: "سازمان آموزش فنی و حرفه ای کشور",
+    year: "تیر 1395",
+    desc: "گواهی مهارت طراحی وب فنی و حرفه ای تاریخ صدور تیر ۱۳۹۵ بدون انقضا",
+    url: "#",
+    imgUrl: "images/certificate/web_design.webp",
+    isContain: true
+  },
+  {
+    title: "فناوری اطلاعات - راهکارهای نرم افزارى براى تجارت",
+    platform: "سازمان آموزش فنی و حرفه ای کشور",
+    year: "تیر 1395",
+    desc: "گواهی مهارت فناوری اطلاعات-راهکارهای نرم افزاری برای تجارت فنی و حرفه ای تاریخ صدور تیر ۱۳۹۵ بدون انقضا",
+    url: "#",
+    imgUrl: "images/certificate/IT_business_software_solutions.webp",
+    isContain: true
+  },
 ];
 
 function openModal(index) {
